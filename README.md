@@ -33,7 +33,7 @@ Menjelaskan tujuan dari pernyataan masalah:
 ## Data Understanding
 
  Dataset ini di dapatkan di [Kaggle] https://www.kaggle.com/datasets/mahatiratusher/stroke-risk-prediction-dataset-v2 
- ![img](![1](https://github.com/user-attachments/assets/5dbead7e-47c9-4ada-8bac-b4bd7c69aa5d)
+ ![img](https://github.com/user-attachments/assets/5dbead7e-47c9-4ada-8bac-b4bd7c69aa5d)
 ### Variabel-variabel pada dataset adalah sebagai berikut:
 - age : merupakan variabel yang menampilkan umur seseorang.
 - gender : merupakan variabel yang menampilkan jenis kelamin seseorang.
