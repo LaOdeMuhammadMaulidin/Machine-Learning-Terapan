@@ -68,28 +68,30 @@ Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
 ![img](https://github.com/user-attachments/assets/27d65e3c-ead1-4371-a470-ce28dcbead0a)
 
 ## Modeling
-Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
+Pada tahap ini dilakukan pembuatan model ML random forest dengan kroteria sebagai berikut : 
+!(https://github.com/user-attachments/assets/efd4213d-6bc5-46cb-8cdd-02ef532333ab)
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-- Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. **Jelaskan proses improvement yang dilakukan**.
-- Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
+pada gambar di atas model random forest dibangun dengan n estimator 100 serta random state 1
+
 
 ## Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
+Pada proyek ini, model yang dikembangkan adalah kasus klasifikasi dan menggunakan metriks akurasi, f1-score, recall dan precision. Berikut hasil pengukuran model yang dipilih yaitu model yang menggunakan algoritma Random Forest
+![Metriks Evaluasi](https://github.com/user-attachments/assets/60211e3c-9ab6-48f8-9592-0d10bf9cf8c0)
 
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
-- Penjelasan mengenai metrik yang digunakan
-- Menjelaskan hasil proyek berdasarkan metrik evaluasi
+-Akurasi Akurasi merupakan metrik untuk menghitung persentase dari total data yang diidentifikasi dan dinilai benar. Rumus akurasi sebagai berikut : ``` AKURASI = (TP + TN) / (TP+FP+FN+TN)```
+* _True Positive_ (TP):
+    Kasus dimana model merupakan data positif yang diprediksi benar. Contohnya, pasien menderita stroke (class 1) dan dari model yang dibuat memprediksi pasien tersebut menderita stroke (class 1).
+    * _True Negative_ (TN):
+    Kasus dimana model merupakan data negatif yang diprediksi benar. Contohnya, pasien tidak menderita stroke (class 2) dan dari model yang dibuat memprediksi pasien tersebut tidak menderita stroke (class 2).
+    * _False Positive_ (FP) - **Type I Error** :
+    Kasus dimana model merupakan data negatif namun diprediksi sebagai data positif. Contohnya, pasien tidak menderita stroke (class 2) tetapi dari model yang telah memprediksi pasien tersebut menderita stroke (class 1).
+    * _False Negative_ (FN) - **Type II Error** :
+    Kasus dimana model merupakan data negatif namun diprediksi sebagai data positif. Contohnya, pasien tidak menderita stroke (class 2) tetapi dari model yang telah memprediksi pasien tersebut menderita stroke (class 1).
+* _Precision_
+    _Precision_ merupakan metrik untuk memprediksi benar positif dari keseluruhan hasil yang diprediksi positf. Rumus _precision_ sebagai berikut: ``` PRECISION = TP / (TP+FP)```
+  _Recall_
+    _Recall_ merupakan metrik untuk memprediksi benar positif dibandingkan dengan keseluruhan data yang benar positif. Rumus _precision_ sebagai berikut: ``` RECALL = TP / (TP+FN)```
+  f1-score_
+    _f1-score_ merupakan metrik untuk perbandingan rata-rata precision dan recall yang dibobotkan. Rumus _f1-score_ sebagai berikut: ``` F1 SCORE = 2 * (RECALL * PRECISION) / (RECALL + PRECISION) ```
 
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
-
-**---Ini adalah bagian akhir laporan---**
-
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
 
