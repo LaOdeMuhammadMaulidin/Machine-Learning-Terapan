@@ -61,7 +61,12 @@ Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
 - menghapus kolom yang tidak digunakan dan kali ini yang di hapus adalah kolom stroke_risk_percentage
 - ``` df.info()``` digunakan untuk mengecek tipe kolom pada dataset
 - ```df.isna().sum()``` digunakan untuk mengecek apakah ada kolom yg kosong, dan ketika ada missing value maka di atasi dengan   ``` df.dropna(inplace=True)``` 
-- ```df.describe()``` digunakan utk mendapatkan info mengenai dataset terhadap nilai rata-rata, median, banyaknya data, nilai Q1 hingga Q3 dan lain-lai
+- ```df.describe()``` digunakan utk mendapatkan info mengenai dataset terhadap nilai rata-rata, median, banyaknya data, nilai Q1 hingga Q3 dan lain-lain
+- melakukan pengecekan duplikat dengan ```df.duplicated().sum()``` dan penghapusan duplikat dengan ```df.drop_duplicates(inplace=True)```
+- Melakukan mapping terhadap kolom diagnosis dari type object ke numerik agar bisa dibaca mesin. Dimana pada kolom age Male  diubah ke nilai 1 female diubah ke nilai 0
+- Melakukan pengecekkan distribusi kelas target serta membagi data menjadi data latih dan data test dengan rasio 80 banding 20% serta melihat penyebaran data test dan data latih
+![img](https://github.com/user-attachments/assets/27d65e3c-ead1-4371-a470-ce28dcbead0a)
+
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
 
