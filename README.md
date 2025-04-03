@@ -36,8 +36,22 @@ Menjelaskan tujuan dari pernyataan masalah:
 ### Variabel-variabel pada dataset adalah sebagai berikut:
 - age : merupakan variabel yang menampilkan umur seseorang.
 - gender : merupakan variabel yang menampilkan jenis kelamin seseorang.
-- chest pain : merupakan variabel yang menunjukan  tingkat sakit pada dada seseorang.
-- 
+- chest pain : merupakan variabel yang menunjukan apakah seseorang mengalami sakit pada dada atau tidak.
+- high_blood_pressure:  merupakan variabel apakah tekanan darah tinggi atau tidak
+- irregular_heartbeat : merupakan variabel apakah detak jantung tidak normal atau normal
+- shortness_of_breath : merupakan variabel apakah bernafas dengan baik atau tidak
+- fatigue_weakness    : merupakan variabel apakah 
+- merupakan variabel apakah
+- merupakan variabel apakah
+- merupakan variabel apakah
+- merupakan variabel apakah
+- merupakan variabel apakah
+- merupakan variabel apakah
+- merupakan variabel apakah
+- merupakan variabel apakah
+- merupakan variabel apakah
+- merupakan variabel apakah
+- merupakan variabel apakah
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
@@ -48,7 +62,7 @@ Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dil
 **Rubrik/Kriteria Tambahan (Opsional)**: 
 - Menjelaskan proses data preparation yang dilakukan
 - Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
-
+- 
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
 
