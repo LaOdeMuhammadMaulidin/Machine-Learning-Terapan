@@ -33,6 +33,7 @@ Menjelaskan tujuan dari pernyataan masalah:
 ## Data Understanding
 
  Dataset ini di dapatkan di [Kaggle] https://www.kaggle.com/datasets/mahatiratusher/stroke-risk-prediction-dataset-v2 
+ ![img](![1](https://github.com/user-attachments/assets/5dbead7e-47c9-4ada-8bac-b4bd7c69aa5d)
 ### Variabel-variabel pada dataset adalah sebagai berikut:
 - age : merupakan variabel yang menampilkan umur seseorang.
 - gender : merupakan variabel yang menampilkan jenis kelamin seseorang.
@@ -40,29 +41,27 @@ Menjelaskan tujuan dari pernyataan masalah:
 - high_blood_pressure:  merupakan variabel apakah tekanan darah tinggi atau tidak
 - irregular_heartbeat : merupakan variabel apakah detak jantung tidak normal atau normal
 - shortness_of_breath : merupakan variabel apakah bernafas dengan baik atau tidak
-- fatigue_weakness    : merupakan variabel apakah 
-- merupakan variabel apakah
-- merupakan variabel apakah
-- merupakan variabel apakah
-- merupakan variabel apakah
-- merupakan variabel apakah
-- merupakan variabel apakah
-- merupakan variabel apakah
-- merupakan variabel apakah
-- merupakan variabel apakah
-- merupakan variabel apakah
-- merupakan variabel apakah
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+- fatigue_weakness    : merupakan variabel apakah sering lelah atau tidak
+- dizziness : merupakan variabel apakah sering pusing atau tidak
+- swelling_edema : merupakan variabel apakah mengalami pembengkakkan edema atau tidak
+- neck_jaw_pain : merupakan variabel apakah mnderita sakit pada rahang atau tidak
+- excessive_sweating : merupakan variabel apakah bekeringat berlebih atau tidak
+- persistent_cough merupakan variabel apakah menderita batuk atau tidak
+- nausea_vomiting: merupakan variabel apakah menderita mual dan mutah atau tidak
+- chest_discomfort: merupakan variabel apakah dada merasa nyaman atau tidak
+- cold_hands_feet: merupakan variabel apakah tangan dan kaki dingin atau tidak
+- snoring_sleep_apnea: merupakan variabel apakah mendengkur saat tidur atau tidak
+- anxiety_doom: merupakan variabel apakah mengalami kecemasan berlebih atau tidak
+- stroke_risk_percentage: merupakan presentasi dari resiko stroke
+- at_risk: merupakan variabel apakah beresiko stroke atau tidak
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
-- 
+Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
+- Meload Dataset ke dalam sebuah Dataframe menggunakan pandas
+- menghapus kolom yang tidak digunakan dan kali ini yang di hapus adalah kolom stroke_risk_percentage
+- ``` df.info()``` digunakan untuk mengecek tipe kolom pada dataset
+- ```df.isna().sum()``` digunakan untuk mengecek apakah ada kolom yg kosong, dan ketika ada missing value maka di atasi dengan   ``` df.dropna(inplace=True)``` 
+- ```df.describe()``` digunakan utk mendapatkan info mengenai dataset terhadap nilai rata-rata, median, banyaknya data, nilai Q1 hingga Q3 dan lain-lai
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
 
