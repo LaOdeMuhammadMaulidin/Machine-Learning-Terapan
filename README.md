@@ -122,7 +122,7 @@ Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
 Pada tahap ini dilakukan pembuatan model ML random forest dengan kroteria sebagai berikut : 
 ![Model Random Forest](https://github.com/user-attachments/assets/efd4213d-6bc5-46cb-8cdd-02ef532333ab)
  
-pada gambar di atas model random forest dibangun dengan n estimator 100 serta random state 1
+pada gambar di atas model random forest hanya dibangun dengan Parameter berupa N_estimator = 100
 
 
 ## Evaluation
