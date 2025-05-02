@@ -32,8 +32,9 @@ Menjelaskan tujuan dari pernyataan masalah:
 
 ## Data Understanding
 
- Dataset ini di dapatkan di [Kaggle] https://www.kaggle.com/datasets/mahatiratusher/stroke-risk-prediction-dataset-v2 
+ Dataset yang dogunakan adalah dataset prediksi resiko stroke V2 ini di dapatkan di [Kaggle] https://www.kaggle.com/datasets/mahatiratusher/stroke-risk-prediction-dataset-v2 
  ![img](https://github.com/user-attachments/assets/5dbead7e-47c9-4ada-8bac-b4bd7c69aa5d)
+  DATASET ini berjumlah 35.000 data dan 19 Kolom.
 ### Variabel-variabel pada dataset adalah sebagai berikut:
 - age : merupakan variabel yang menampilkan umur seseorang.
 - gender : merupakan variabel yang menampilkan jenis kelamin seseorang.
@@ -54,23 +55,73 @@ Menjelaskan tujuan dari pernyataan masalah:
 - anxiety_doom: merupakan variabel apakah mengalami kecemasan berlebih atau tidak
 - stroke_risk_percentage: merupakan presentasi dari resiko stroke
 - at_risk: merupakan variabel apakah beresiko stroke atau tidak
+  **Proses EDA**
+  Pada proses Visualisasi untuk melihat perbadingan dataset di peroleh
+  - gender : pada kolom ini perbadingan datanya 49,9% untuk perempuan dan 50,1% untuk laki laki
+  - chest_pain : pada kolom ini perbadingan datanya 78,3% untuk perempuan dan 21,7% untuk laki laki
+  - high_blood_pressure : pada kolom ini perbadingan datanya 65,3% untuk perempuan dan 34,7% untuk laki laki
+  - iregullar_heartbeat : pada kolom ini perbadingan datanya 84% untuk perempuan dan 16% untuk laki laki
+  - shortness_of_breath : pada kolom ini perbadingan datanya 73,2% untuk perempuan dan 26,8% untuk laki laki
+  - fatigue_weakness : pada kolom ini perbadingan datanya 68% untuk perempuan dan 32% untuk laki laki
+  - dizziness : pada kolom ini perbadingan datanya 73,5% untuk perempuan dan 26,5% untuk laki laki
+  - swelling_edema : pada kolom ini perbadingan datanya 78,3% untuk perempuan dan 21,7% untuk laki laki
+  - neck_jaw_pain : pada kolom ini perbadingan datanya 84% untuk perempuan dan 16% untuk laki laki
+  - excessive_sweating : pada kolom ini perbadingan datanya 84,8% untuk perempuan dan 15,2% untuk laki laki
+  - persistent_cough : pada kolom ini perbadingan datanya 83,3% untuk perempuan dan 16,7% untuk laki laki
+  - nausea_vomiting : pada kolom ini perbadingan datanya 85% untuk perempuan dan 15% untuk laki laki
+  - chest_discomfort : pada kolom ini perbadingan datanya 78,4% untuk perempuan dan 21,6% untuk laki laki
+  - cold_hands_feet : pada kolom ini perbadingan datanya 73% untuk perempuan dan 27% untuk laki laki
+  - snoring_sleep_apnea : pada kolom ini perbadingan datanya 77,9% untuk perempuan dan 22,1% untuk laki laki
+  - anxiety_doom : pada kolom ini perbadingan datanya 84,9% untuk perempuan dan 15,1% untuk laki laki
+  - at_risk : pada kolom ini perbadingan datanya 38,4% untuk perempuan dan 61,6% untuk laki laki
+ 
+  Pada Proses Pengecekkan outlier di peroleh : 
+  Ada outlier Pada age
+  Jumlah Outlier : 12
+  Tidak ada Outlier Pada gender
+  Ada outlier Pada chest_pain
+  Jumlah Outlier : 4054
+  Tidak ada Outlier Pada high_blood_pressure
+  Ada outlier Pada irregular_heartbeat
+  Jumlah Outlier : 3001
+  Tidak ada Outlier Pada shortness_of_breath
+  Tidak ada Outlier Pada fatigue_weakness
+  Tidak ada Outlier Pada dizziness
+  Ada outlier Pada swelling_edema
+  Jumlah Outlier : 4068
+  Ada outlier Pada neck_jaw_pain
+  Jumlah Outlier : 3001
+  Ada outlier Pada excessive_sweating
+  Jumlah Outlier : 2843
+  Ada outlier Pada persistent_cough
+  Jumlah Outlier : 3135
+  Ada outlier Pada nausea_vomiting
+  Jumlah Outlier : 2806
+  Ada outlier Pada chest_discomfort
+  Jumlah Outlier : 4053
+  Tidak ada Outlier Pada cold_hands_feet
+  Ada outlier Pada snoring_sleep_apnea
+  Jumlah Outlier : 4145
+  Ada outlier Pada anxiety_doom
+  Jumlah Outlier : 2828
+  Tidak ada Outlier Pada at_risk
 
 ## Data Preparation
 Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
 - Meload Dataset ke dalam sebuah Dataframe menggunakan pandas
 - menghapus kolom yang tidak digunakan dan kali ini yang di hapus adalah kolom stroke_risk_percentage
 - ``` df.info()``` digunakan untuk mengecek tipe kolom pada dataset
-- ```df.isna().sum()``` digunakan untuk mengecek apakah ada kolom yg kosong, dan ketika ada missing value maka di atasi dengan   ``` df.dropna(inplace=True)``` 
+- ```df.isna().sum()``` digunakan untuk mengecek apakah ada kolom yg kosong, ternyata pada dataset ini tidak ditemukan missing value. ketika ada missing value maka di atasi dengan   ``` df.dropna(inplace=True)``` 
 - ```df.describe()``` digunakan utk mendapatkan info mengenai dataset terhadap nilai rata-rata, median, banyaknya data, nilai Q1 hingga Q3 dan lain-lain
-- melakukan pengecekan duplikat dengan ```df.duplicated().sum()``` dan penghapusan duplikat dengan ```df.drop_duplicates(inplace=True)```
+- melakukan pengecekan duplikat dengan ```df.duplicated().sum()```. Pada Dataset ini ditemuka sebanyak 16279 data duplikat dan dilakukan penghapusan duplikat dengan cara ```df.drop_duplicates(inplace=True)```
 - Melakukan mapping terhadap kolom diagnosis dari type object ke numerik agar bisa dibaca mesin. Dimana pada kolom age Male  diubah ke nilai 1 female diubah ke nilai 0
 - Melakukan pengecekkan distribusi kelas target serta membagi data menjadi data latih dan data test dengan rasio 80 banding 20% serta melihat penyebaran data test dan data latih
 ![img](https://github.com/user-attachments/assets/27d65e3c-ead1-4371-a470-ce28dcbead0a)
 
 ## Modeling
 Pada tahap ini dilakukan pembuatan model ML random forest dengan kroteria sebagai berikut : 
-!(https://github.com/user-attachments/assets/efd4213d-6bc5-46cb-8cdd-02ef532333ab)
-
+![Model Random Forest](https://github.com/user-attachments/assets/efd4213d-6bc5-46cb-8cdd-02ef532333ab)
+ 
 pada gambar di atas model random forest dibangun dengan n estimator 100 serta random state 1
 
 
