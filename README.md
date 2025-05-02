@@ -120,9 +120,9 @@ Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
 
 ## Modeling
 Pada tahap ini dilakukan pembuatan model ML random forest dengan kroteria sebagai berikut : 
-![Model Random Forest](https://github.com/user-attachments/assets/efd4213d-6bc5-46cb-8cdd-02ef532333ab)
+![Model Random Forest](![image](https://github.com/user-attachments/assets/dca84a82-8311-4786-8d6c-944e147a683a)
  
-pada gambar di atas model random forest hanya dibangun dengan Parameter berupa N_estimator = 100
+mula mula import library model random forest ```from sklearn.ensemble import RandomForestClassifier``` kemudian import library untuk evaluasi ``` from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, precision_score, recall_score, f1_score``` setelah itu baut variabel yang berisi ```RandomForestClassifier``` dengan  Parameter berupa N_estimator = 100 dan kemudian latih model yang sudah dibuat dan variabel predict untuk untuk melakukan prediksi
 
 
 ## Evaluation
@@ -144,5 +144,17 @@ Pada proyek ini, model yang dikembangkan adalah kasus klasifikasi dan menggunaka
     _Recall_ merupakan metrik untuk memprediksi benar positif dibandingkan dengan keseluruhan data yang benar positif. Rumus _precision_ sebagai berikut: ``` RECALL = TP / (TP+FN)```
   f1-score_
     _f1-score_ merupakan metrik untuk perbandingan rata-rata precision dan recall yang dibobotkan. Rumus _f1-score_ sebagai berikut: ``` F1 SCORE = 2 * (RECALL * PRECISION) / (RECALL + PRECISION) ```
+  
+Apakah sudah menjawab setiap problem statment?
+ya sudah.
+Apakah berhasil mencapai setiap goals yang diharapkan?
+ya.sudah.
+Apakah setiap solusi statement yang kamu rencanakan berdampak? Tentu saja
+ - Menghapus Colom yang tidak dibtuhkan yaitu presentasi resiko diabetes berdampak pada akuraso karena kolom ini bisa mengganggu proses latih model
+ - melakukan cleaning data dengan menghilangkan missing value yang ada dan menghapus duplikat dari data
+ - melakukan splitt data dengan rasio 80% data training dan 20% data testing sehingga menghasilkan model yang akurat
+ - melakukan evaluasi dengan confussion matriks
+
+  
 
 
