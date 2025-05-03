@@ -14,21 +14,21 @@ dengan perkembangan teknologi yang semakin pesat kita dapat dengan mudah mengeta
 ### Problem Statements
 
 Beradasarkan latar belakang di atas didapatkan rincian masalah:
-- Bagaimana melakukan preprocessing untuk membuat model machine learning yang baik?
-- Bagaimana melakukan evaluasi terhadap model ML yang telah di buat menggunakan model random forest?
+- Dengan tingginya angka kematian stroke secara golbal, bagaimana cara mengidentifikasi resiko stroke menggunakan Machine Learning algoritma Random Forest?
+- Bagaimana melakukan evaluasi untuk membuat model machine learning yang efisien guna mengidentifikasi resiko stroke?
 
 ### Goals
 
 Menjelaskan tujuan dari pernyataan masalah:
-- untuk melakukan preprocessing untuk membuat model machine learning yang baik
-- Untuk melakukan evaluasi terhadap model ML yang telah di buat menggunakan model random forest
+- untuk cara mengidentifikasi resiko stroke menggunakan Machine Learning algoritma Random Forest
+- Untuk melakukan evaluasi untuk membuat model machine learning yang efisien guna mengidentifikasi resiko stroke
 
 
     ### Solution statements
-    - Menghapus Colom yang tidak dibtuhkan yaitu presentasi resiko diabetes
     - melakukan cleaning data dengan menghilangkan missing value yang ada dan menghapus duplikat dari data
-    - melakukan splitt data dengan rasio 80% data training dan 20% data testing 
-    - melakukan evaluasi dengan confussion matriks
+    - melakukan splitt data dengan rasio 80% data training dan 20% data testing
+    - menggunakan random forest clasifier untuk mengidentifikasi resiko diabetes dengan parameter yang sesuai.
+    - melakukan evaluasi dengan mengetahui accuracy, recall, presision dan f1 score serta menampilkan confussion matriks
 
 ## Data Understanding
 
@@ -121,7 +121,8 @@ Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
 ## Modeling
 Pada tahap ini dilakukan pembuatan model ML random forest dengan kroteria sebagai berikut : 
 ![Model Random Forest](![image](https://github.com/user-attachments/assets/dca84a82-8311-4786-8d6c-944e147a683a)
- 
+
+ **Cara Kerja**
 mula mula import library model random forest ```from sklearn.ensemble import RandomForestClassifier``` kemudian import library untuk evaluasi ``` from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, precision_score, recall_score, f1_score``` setelah itu baut variabel yang berisi ```RandomForestClassifier``` dengan  Parameter berupa N_estimator = 100 dan kemudian latih model yang sudah dibuat dan variabel predict untuk untuk melakukan prediksi
 
 
