@@ -122,9 +122,11 @@ Berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
 Pada tahap ini dilakukan pembuatan model ML random forest dengan kroteria sebagai berikut : 
 ![Model Random Forest](![image](https://github.com/user-attachments/assets/dca84a82-8311-4786-8d6c-944e147a683a)
 
- **Cara Kerja**
-mula mula import library model random forest ```from sklearn.ensemble import RandomForestClassifier``` kemudian import library untuk evaluasi ``` from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, precision_score, recall_score, f1_score``` setelah itu baut variabel yang berisi ```RandomForestClassifier``` dengan  Parameter berupa N_estimator = 100 dan kemudian latih model yang sudah dibuat dan variabel predict untuk untuk melakukan prediksi
+ ### Cara Kerja
+Mula mula import library model random forest ```from sklearn.ensemble import RandomForestClassifier``` kemudian import library untuk evaluasi ``` from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, precision_score, recall_score, f1_score``` kemudian setelah itu baut variabel yang berisi ```RandomForestClassifier``` yang Secara acak mengambil sampel data pelatihan dengan penggantian Proses ini diulang sebanyak jumlah pohon yang ditentukan oleh parameter n_estimators (dalam kasus ini, 100 kali). Setiap sampel bootstrap akan digunakan untuk melatih satu pohon keputusan.Setelah semua pohon (sesuai dengan n_estimators) selesai dibangun, kumpulan pohon ini akan menjadi Random Forest yang terlatih. Setiap pohon akan membuat prediksi kelas untuk sampel tersebut berdasarkan aturan-aturan yang telah dipelajarinya selama pelatihan.Hasil prediksi dari semua pohon akan diagregasikan. Untuk klasifikasi, metode agregasi yang paling umum adalah majority voting: kelas yang paling sering diprediksi oleh semua pohon akan menjadi prediksi akhir untuk sampel tersebut. Hasil prediksi untuk semua sampel dalam test_features akan dikembalikan dalam bentuk array NumPy dan disimpan dalam variabel predict.
 
+### Parameter
+Parameter ini menentukan jumlah pohon keputusan dalam forest. Semakin banyak pohon yang dibangun, biasanya kinerja model akan lebih baik dan lebih stabil (kurang rentan terhadap overfitting hingga titik tertentu). Namun, dengan jumlah pohon yang sangat banyak, waktu pelatihan dan prediksi juga akan meningkat, dan manfaat penambahannya mungkin akan berkurang. nilai 100 Ini berarti model Random Forest akan terdiri dari 100 pohon keputusan yang berbeda.
 
 ## Evaluation
 Pada proyek ini, model yang dikembangkan adalah kasus klasifikasi dan menggunakan metriks akurasi, f1-score, recall dan precision. Berikut hasil pengukuran model yang dipilih yaitu model yang menggunakan algoritma Random Forest
@@ -146,15 +148,14 @@ Pada proyek ini, model yang dikembangkan adalah kasus klasifikasi dan menggunaka
   f1-score_
     _f1-score_ merupakan metrik untuk perbandingan rata-rata precision dan recall yang dibobotkan. Rumus _f1-score_ sebagai berikut: ``` F1 SCORE = 2 * (RECALL * PRECISION) / (RECALL + PRECISION) ```
   
-Apakah sudah menjawab setiap problem statment?
-ya sudah.
-Apakah berhasil mencapai setiap goals yang diharapkan?
-ya.sudah.
-Apakah setiap solusi statement yang kamu rencanakan berdampak? Tentu saja
- - Menghapus Colom yang tidak dibtuhkan yaitu presentasi resiko diabetes berdampak pada akuraso karena kolom ini bisa mengganggu proses latih model
- - melakukan cleaning data dengan menghilangkan missing value yang ada dan menghapus duplikat dari data
- - melakukan splitt data dengan rasio 80% data training dan 20% data testing sehingga menghasilkan model yang akurat
- - melakukan evaluasi dengan confussion matriks
+- Model yang telah dibangun telah menjawab problem statement karena dapat mengidentifikasi resiko diabetes dengan akurasi yang tinggi serta dapat melakukan evaluasi terhadap model tersebut dengan banyak parameter evaluasi yang digunakan
+- Hasil model sangat mencapai target sesuai yang diharapkan dengan bagusnya akurasi model
+- Setiap solusi statement yang saya rencanakan berdampak pada model
+  **Pertama** : data tidak memiliki missing value dan penghapusan duplikat berdampak Pencegahan Bias dimana Data duplikat dapat memberikan bobot yang tidak semestinya pada sampel yang sama selama pelatihan model. Ini dapat menyebabkan model menjadi bias terhadap sampel duplikat dan kurang mampu menggeneralisasi dengan baik pada data yang unik serta Peningkatan Efisiensi Pelatihan
+  **Kedua** : Split data tidak secara langsung mengubah cara kerja algoritma Random Forest, tetapi memungkinkan melatih dan mengevaluasi model secara efektif. Model Random Forest akan dilatih menggunakan 80% data, dan kemampuannya untuk menggeneralisasi akan diukur pada 20% data yang tidak pernah dilihatnya selama pelatihan.
+  **Ketiga** : Pemilihan parameter yang sesuai akan secara langsung mempengaruhi kinerja model Random Forest. Parameter yang optimal akan memungkinkan model untuk mempelajari pola risiko diabetes secara efektif dari data pelatihan dan membuat prediksi yang akurat pada data pengujian.
+  **Terakhir** : accuracy, recall, presision dan f1 score serta menampilkan confussion matriks tidak mengubah model itu sendiri, tetapi memberikan pemahaman tentang seberapa baik model tersebut bekerja dalam mengidentifikasi risiko diabetes.
+
 
   
 
