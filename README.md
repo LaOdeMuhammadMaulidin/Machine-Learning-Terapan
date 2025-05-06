@@ -4,7 +4,7 @@
 
 Pada saat ini, penyakit stroke menjadi penyakit yang bisa berpotensi menyebabkan kematian. Di seluruh dunia, jumlah kasus stroke terus meningkat, dan memahami faktor-faktor yang mempengaruhi resiko kematian pada pasien stroke adalah langkah penting dalam penanganan dan perawatan yang lebih baik. Stroke adalah tanda-tanda klinis yang terjadi secara cepat atau mendadak berupa defisit fokal (atau global) pada fungsi otak, dengan gejala yang berlangsung selama 24 jam atau lebih atau menyebabkan kematian, tanpa penyebab yang jelas selain penyebab vaskuler (WHO). Menurut data World Health Organization (WHO) diperkirakan 17,5 juta orang meninggal dunia akibat penyakit kardiovaskular dengan 6,7 juta orang meninggal akibat stroke, yaitu urutan kedua tertinggi mengakibatkan kematian setelah penyakit jantung koroner. 
 
-dengan perkembangan teknologi yang semakin pesat kita dapat dengan mudah mengetahui resiko terkena stroke dengan beberapa gejala yang di alami. salah satu metode tersebut adalah machine learning yang merupakan proses belajar komputer tanpa harus di program secara eksplisit. dengan adanya ML kita dapat mengetahui serta mengklasifikasikan apakah kita beresiko stroke atau tidak
+Dengan perkembangan teknologi yang semakin pesat kita dapat dengan mudah mengetahui resiko terkena stroke dengan beberapa gejala yang di alami. salah satu metode tersebut adalah machine learning yang merupakan proses belajar komputer tanpa harus di program secara eksplisit. dengan adanya ML kita dapat mengetahui serta mengklasifikasikan apakah kita beresiko stroke atau tidak
   
 [Prediksi Penyakit Stroke Menggunakan Machine Learning Dengan Algoritma Random Forest](https://e-jurnal.pnl.ac.id/infomedia/article/view/5199 ) 
 
@@ -20,8 +20,8 @@ Beradasarkan latar belakang di atas didapatkan rincian masalah:
 ### Goals
 
 Menjelaskan tujuan dari pernyataan masalah:
-- untuk cara mengidentifikasi resiko stroke menggunakan Machine Learning algoritma Random Forest
-- Untuk melakukan evaluasi untuk membuat model machine learning yang efisien guna mengidentifikasi resiko stroke
+- Memprediksi risiko terkena stroke berdasarkan faktor-faktor kesehatan menggunakan algoritma Machine Learning Random Forest.
+- Menganalisis metrik evaluasi model Random Forest dan fitur-fitur penting yang teridentifikasi untuk memastikan model tidak hanya akurat dalam memprediksi risiko   stroke, tetapi juga memberikan wawasan yang relevan dan dapat diinterpretasikan untuk mendukung pengambilan keputusan klinis.
 
 
     ### Solution statements
